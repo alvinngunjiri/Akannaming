@@ -18,20 +18,20 @@ function fn(){
     if (month < 0 || day > 12){
         document,getElementsByClassName("montherror").innerHtml = "Enter valid month";
         return false;
-    }else if (month == "") {
+    } else if (month == "") {
         document.getElementsByClassName("montherror").innerHtml = "This field cannot be empty";
         return false;
-    }else {
+    } else {
         d.setMonth(month);
     }
 
     if (year < 0) {
         document,getElementsByClassName("yearerror").innerHtml = "Enter valid year";
         return false;
-    }else if (year == "") {
+    } else if (year == "") {
         document.getElementsByClassName("yearerror").innerHtml = "This field cannot be empty";
         return false;
-    }else {
+    } else {
         d.setYear(year);
     }
     
