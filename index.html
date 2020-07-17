@@ -2,22 +2,43 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AKAN NAME GENNERATOR</title>
-    <link href="CSS/bootstrap.css" rel="stylesheet" media="all">
-    <link rel="https;//fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
-    <link rel="icon">
+    <link href="CSS/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
 </head>
 <body>
-    <div class="content">
-        <div class="container">
-              <h1>AKAN NAME GENERATOR</h1>
-              <p>
-                  <div class="find">
-                      <strong>
-                          GET AN AKAN NAME ?
-                      </strong>
-                  </div>
-              </p>
-          </div>
+    <div class="formelements">
+        <div class="description">
+        <h1 class="display-4 text-primary">AKAN NAMING SYSTEM</h1>
+        <p>This website is used to determine your Akan(Ghanaian origin)name by using your birthdate
+            This naming form is from Ghanaian origin<br>
+            if you are male you would be named as follows:</p>
+        <p>Sunday-Kwasi, Monday-Kwadwo, Tuesday-Kwabena, Wednesday-Kwaku, Thursday-Yaw, Friday-Kofi, Saturday-Kwame</p>
+        <p>If you are Female;</p>
+        <p>Sunday-Akosua, Monday-Adwoa, Tuesday-Abenaa, Wednesday-Akua, Thursday-Yaa, Friday-Afua, Saturday-Ana </p> 
+        </p>
+    </div>
+    <form>
+        <h1 class="text-primary">Enter your birth date:</h1>
+        <input type="text" id="day" class="form-control" placeholder="day">
+        <p id="dayerror"></p>
+        
+        <input type="text" id="month" class="form-control" placeholder="month">
+        <p id="montherror"></p>
+
+        <input type="text" id="day" class="form-control" placeholder="day">
+        <p id="yearerror"></p>
+
+        <h1 text-primary>Select your gender</h1>
+        <label for="male">Male:</label>
+        <input type="checkbox" id="male" class="">
+        <label for="male">Female:</label>
+        <input type="checkbox" id="female" class="">
+        <p id="check-boxerror"></p>
+
+        <button type="button" onclick="fn()" class="btn btn-large btn-block btn-outline-primary">Submit</button>
+    </form>
 </body>
 </html>
