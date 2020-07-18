@@ -1,96 +1,113 @@
-function fn(){
-    var d = new Date();
-    
-    var date = parseInt(document.getElementById("day").value);
-    var month = parseInt(document.getElementById("month").value) - 1;
-    var year = parseInt(document.getElementById("year").value);
-
-    if (day <0 || day > 31) {
-        document,getElementsByClassName("dayerror").innerHtml = "Enter valid date";
-        return false;
-    } else if (date == "") {
-        document.getElementsByClassName("dayerror").innerHtml = "This field cannot be empty";
-        return false;
-    } else {
-        d.setDate(date);
-    }
-
-    if (month < 0 || day > 12){
-        document,getElementsByClassName("montherror").innerHtml = "Enter valid month";
-        return false;
-    } else if (month == "") {
-        document.getElementsByClassName("montherror").innerHtml = "This field cannot be empty";
-        return false;
-    } else {
-        d.setMonth(month);
-    }
-
-    if (year < 0) {
-        document,getElementsByClassName("yearerror").innerHtml = "Enter valid year";
-        return false;
-    } else if (year == "") {
-        document.getElementsByClassName("yearerror").innerHtml = "This field cannot be empty";
-        return false;
-    } else {
-        d.setYear(year);
-    }
-    
-    var day = d.getDay();
-    var days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
-    var male = ["kwasi","Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"]
-    var female = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"]
+var year;
+var month;
+var day;
 
 
-function getAkan() {
-    var ismale = document.getElementById('male').checked;
-    var isfemale = document.getElementById('female').checked;
-    if (ismale == true && isfemale == false){
-        if (day == 0) {
-            // return male[0];
-            alert("your name is " + male[0]);
-        }
-        else if (day == 1) {
-            alert("your name is " + male[1]);
-        }
-        else if (day == 2) {
-            alert("your name is " + male[2]);
-        }
-        else if (day == 3) {
-            alert("your name is " + male[3]);
-        }
-        else if (day == 4) {
-            alert("your name is " + male[4]);
-        }
-        else if (day == 5) {
-            alert("your name is " + male[5]);
-        }
-        else if (day == 6) {
-            alert("your name is "+ male[6]);
-        }
-    
-    } else if (ismale == false && isfemale == true) {
-        if (day == 0) {
-            // return male[0];
-            alert("your name is " + female[0]);
-        }
-        else if (day == 1) {
-            alert("your name is " + female[1]);
-        }
-        else if (day == 2) {
-            alert("your name is " + female[2]);
-        }
-        else if (day == 3) {
-            alert("your name is " + female[3]);
-        }
-        else if (day == 4) {
-            alert("your name is " + female[4]);
-        }
-        else if (day == 5) {
-            alert("your name is " + female[5]);
-        }
-        else if (day == 6) {
-            alert("your name is " + female[6]);
-        }
-    }
+function getYear() {
+  document.getElementById("myYear").value = prompt("Enter the year you were born:");
+  year = parseInt(document.getElementById("myYear").value);
+  return year;
 }
-getAkan();
+
+function getMonth() {
+  document.getElementById("myMonth").value = parseInt(prompt("Enter the month you were born:"));
+  month = parseInt(document.getElementById("myMonth").value);
+  if (month < 1 || month > 12) {
+    document.getElementById("myMonth").value = parseInt(prompt("Enter valid month between 1 and 12:"));
+    month = parseInt(document.getElementById("myMonth").value);
+  }
+  return month;
+}
+
+function dDay() {
+  document.getElementById("myDay").value = parseInt(prompt("Enter the month you were born:"));
+  day = parseInt(document.getElementById("myDay").value);
+  if (day < 1 || day > 31) {
+    document.getElementById("myDay").value = parseInt(prompt("Enter a valid day between 1 and 31:"));
+    day = parseInt(document.getElementById("myDay").value);
+  }
+  return day;
+}
+
+
+
+
+
+var male;
+var female;
+
+function myFunction() {
+  male = document.getElementById("male");
+  female = document.getElementById("female");
+
+  year = document.getElementById("myYear").value;
+  month = document.getElementById("myMonth").value;
+  day = document.getElementById("myDay").value;
+
+  var d = new Date(year, (month - 1), day);
+
+  var dayofweek = d.getDay();
+
+
+  var man = ['Kwasi', 'Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Kofi', 'Kwame'];
+  var woman = ['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Ama'];
+
+  if (female.checked) {
+
+    if (dayofweek == 0) {
+      alert("Akan name is " + woman[0]);
+    }
+
+    if (dayofweek == 1) {
+      alert("Akan name is " + woman[1]);
+    }
+
+    if (dayofweek == 2) {
+      alert("Akan name is " + woman[2]);
+    }
+
+    if (dayofweek == 3) {
+      alert("Akan name is " + woman[3]);
+    }
+
+    if (dayofweek == 4) {
+      alert("Akan name is " + woman[4]);
+    }
+
+    if (dayofweek == 5) {
+      alert("Akan name is " + woman[5]);
+    }
+
+    if (dayofweek == 6) {
+      alert("Akan name is " + woman[6]);
+    }
+  } else {
+    if (dayofweek == 0) {
+      alert("Akan name is " + man[0]);
+    }
+
+    if (dayofweek == 1) {
+      alert("Akan name is " + man[1]);
+    }
+
+    if (dayofweek == 2) {
+      alert("Akan name is " + man[2]);
+    }
+
+    if (dayofweek == 3) {
+      alert("Akan name is " + man[3]);
+    }
+
+    if (dayofweek == 4) {
+      alert("Akan name is " + man[4]);
+    }
+
+    if (dayofweek == 5) {
+      alert("Akan name is " + man[5]);
+    }
+
+    if (dayofweek == 6) {
+      alert("Akan name is " + man[6]);
+    }
+  }
+}

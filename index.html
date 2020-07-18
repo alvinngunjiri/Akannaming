@@ -1,45 +1,58 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AKAN NAME GENNERATOR</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <script src="js/script.js"></script>
+    <title>Akan Naming</title>
+    <script src="script.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
-    <div class="formelements">
-        <div class="description">
-        <h1 class="display-4 text-primary">AKAN NAMING SYSTEM</h1>
-        <p>This website is used to determine your Akan(Ghanaian origin)name by using your birthdate
-            This naming form is from Ghanaian origin<br>
-            if you are male you would be named as follows:</p>
-        <p>Sunday-Kwasi, Monday-Kwadwo, Tuesday-Kwabena, Wednesday-Kwaku, Thursday-Yaw, Friday-Kofi, Saturday-Kwame</p>
-        <p>If you are Female;</p>
-        <p>Sunday-Akosua, Monday-Adwoa, Tuesday-Abenaa, Wednesday-Akua, Thursday-Yaa, Friday-Afua, Saturday-Ana </p> 
-        </p>
+
+    <div class="jumbotron-fluid">
+
+
+
+
+        <form>
+            <div class="container">
+                <h1>Akan People Naming Project:</h1>
+                <p>An Akan name is assigned to a child at birth in the Ghana community.</p>
+                <p>Please <strong>click</strong> on the buttons to input your information and glimpse what your Akan
+                    name would
+                    be.</p>
+
+                <label for="year"><b>YEAR</b></label><br>
+                <input id="myYear" type="button" value="YYYY" name="year" onclick="getYear()"><br>
+                <br>
+
+                <label for="month"><b>MONTH</b></label><br>
+                <input id="myMonth" type="button" value="MM" name="month" onclick="getMonth()"><br>
+                <br>
+                <label for="day"><b>DAY</b></label><br>
+                <input id="myDay" type="button" value="DD" name="day" onclick="dDay()"><br>
+
+
+
+
+                <br>
+                <input type="radio" name="gender" id="male" />MALE: <br />
+                <br>
+                <input type="radio" name="gender" id="female" />FEMALE: <br />
+                <br>
+
+                <button onclick="myFunction()">SUBMIT</button>
+
+            </div>
+
+
+        </form>
+
     </div>
-    <form>
-        <h1 class="text-primary">Enter your birth date:</h1>
-        <input type="text" id="day" class="form-control" placeholder="day">
-        <p id="dayerror"></p>
-        
-        <input type="text" id="month" class="form-control" placeholder="month">
-        <p id="montherror"></p>
-
-        <input type="text" id="year" class="form-control" placeholder="year">
-        <p id="yearerror"></p>
-
-        <h1 text-primary>Select your gender</h1>
-        <label for="male">Male:</label>
-        <input type="checkbox" id="male" class="">
-        <label for="male">Female:</label>
-        <input type="checkbox" id="female" class="">
-        <p id="check-boxerror"></p>
-
-        <button type="button" onclick="fn()" class="btn btn-large btn-block btn-outline-primary">Submit</button>
-    </form>
 </body>
+
 </html>
