@@ -19,3 +19,6 @@ This is a Personal Project that i have created an aplication that submit your ak
  -The submit button is the part where your input or your details have been fed to the application and then it displays or output your Akan name and the day your were born in case you forget to choose the gender or the correct date aprompt message will appear to inform you to input the correct details.
 ## Contribution
 Incase of any contributions, feel free to do so by visiting[this link]https://github.com/alvinngunjiri/Akannaming.git
+### license
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+Copyright (c) 2020 *ngunjirii*
