@@ -20,7 +20,7 @@ function getMonth() {
 }
 
 function dDay() {
-  document.getElementById("myDay").value = parseInt(prompt("Enter the month you were born:"));
+  document.getElementById("myDay").value = parseInt(prompt("Enter the day you were born:"));
   day = parseInt(document.getElementById("myDay").value);
   if (day < 1 || day > 31) {
     document.getElementById("myDay").value = parseInt(prompt("Enter a valid day between 1 and 31:"));
